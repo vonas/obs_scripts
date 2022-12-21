@@ -10,13 +10,13 @@ def script_description():
 
 def on_event(event):
     if event == obs.OBS_FRONTEND_EVENT_REPLAY_BUFFER_STARTED:
-        play_thread = threading.Thread(target=play_audio, args=('../../data\obs-plugins/frontend-tools/scripts/front-end-feedback/replay_start.mp3',))
+        play_thread = threading.Thread(target=play_audio, args=('../../data/obs-plugins/frontend-tools/scripts/front-end-feedback/replay_start.mp3',))
         play_thread.start()
     if event == obs.OBS_FRONTEND_EVENT_REPLAY_BUFFER_STOPPED:
-        play_thread = threading.Thread(target=play_audio, args=('../../data\obs-plugins/frontend-tools/scripts/front-end-feedback/replay_stop.mp3',))
+        play_thread = threading.Thread(target=play_audio, args=('../../data/obs-plugins/frontend-tools/scripts/front-end-feedback/replay_stop.mp3',))
         play_thread.start()
     if event == obs.OBS_FRONTEND_EVENT_REPLAY_BUFFER_SAVED:
-        play_thread = threading.Thread(target=play_audio, args=('../../data\obs-plugins/frontend-tools/scripts/front-end-feedback/replay_saved.mp3',))
+        play_thread = threading.Thread(target=play_audio, args=('../../data/obs-plugins/frontend-tools/scripts/front-end-feedback/replay_saved.mp3',))
         play_thread.start()
 
 def play_audio(audio_file):
